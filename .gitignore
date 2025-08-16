@@ -1,36 +1,35 @@
-# Python
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-*.egg-info/
-.pytest_cache/
-.mypy_cache/
-.venv/
-venv/
-env/
-
-# Node/Electron
-node_modules/
-.cache/
-dist/
-out/
-build/
-*.log
-
-# PyInstaller
-/build/
-/dist/
-*.spec
-
-# OS/editor
+# --- OS / editors
 .DS_Store
 Thumbs.db
 .idea/
-.vscode/
+.vscode/*
+!.vscode/settings.json
 
-# Audio/binaries (use LFS if you must track)
+# --- Audio clutter
+stems/
+output/
 *.wav
 *.aif
 *.aiff
 *.flac
+
+# --- Node/Electron artifacts
+node_modules/
+dist/
+out/
+build/
+.npmrc
+*.log
+npm-debug.log*
+yarn-error.log*
+
+# --- Python/Qt artifacts (if you’re building the PySide6 version too)
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+build/
+dist/
+*.spec
