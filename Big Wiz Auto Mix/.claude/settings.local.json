@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm init:*)",
+      "Bash(npm install:*)",
+      "Bash(mkdir:*)",
+      "Bash(npm start)",
+      "Bash(taskkill:*)",
+      "Bash(\"taskkill\" \"/F\" \"/PID\" \"15092\")",
+      "Bash(powershell:*)",
+      "Bash(npm run build:main:*)",
+      "Bash(cross-env:*)",
+      "Bash(set NODE_ENV=development)",
+      "Bash(npx electron:*)",
+      "Bash(\"taskkill\" \"/F\" \"/IM\" \"node.exe\")",
+      "Bash(npm run build:*)",
+      "Bash(npx tsc:*)"
+    ],
+    "deny": [],
+    "ask": [],
+    "defaultMode": "acceptEdits"
+  }
+}

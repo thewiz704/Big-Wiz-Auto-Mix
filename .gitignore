@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+env/
+
+# Node/Electron
+node_modules/
+.cache/
+dist/
+out/
+build/
+*.log
+
+# PyInstaller
+/build/
+/dist/
+*.spec
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Audio/binaries (use LFS if you must track)
+*.wav
+*.aif
+*.aiff
+*.flac

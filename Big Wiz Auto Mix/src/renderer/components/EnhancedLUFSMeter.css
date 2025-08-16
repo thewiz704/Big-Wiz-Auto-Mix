@@ -1,0 +1,106 @@
+.enhanced-lufs-meter {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  border: 1px solid #444;
+  border-radius: 12px;
+  padding: 12px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.meter-controls {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 12px;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 4px;
+  border-radius: 8px;
+}
+
+.meter-controls button {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: #ccc;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.meter-controls button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.meter-controls button.active {
+  background: #0066cc;
+  color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 102, 204, 0.3);
+}
+
+.lufs-canvas {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.meter-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.quick-stats {
+  display: flex;
+  gap: 16px;
+  font-family: 'Consolas', 'Monaco', monospace;
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+}
+
+.stat label {
+  color: #888;
+  font-weight: 600;
+  min-width: 20px;
+}
+
+.stat value {
+  font-weight: bold;
+  font-size: 12px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .enhanced-lufs-meter {
+    padding: 8px;
+  }
+  
+  .meter-controls {
+    flex-direction: column;
+  }
+  
+  .quick-stats {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+}
+
+/* Animation for meter updates */
+.lufs-canvas {
+  transition: opacity 0.1s ease;
+}
+
+.enhanced-lufs-meter:hover .lufs-canvas {
+  box-shadow: 0 0 12px rgba(0, 102, 204, 0.2);
+}

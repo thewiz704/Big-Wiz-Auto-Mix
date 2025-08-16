@@ -1,0 +1,44 @@
+{
+  "name": "big-wiz-auto-mix",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/main/main.js",
+  "scripts": {
+    "start": "concurrently \"npm run dev:renderer\" \"npm run dev:main\"",
+    "dev:renderer": "webpack serve --mode development",
+    "dev:main": "wait-on http://localhost:3000 && cross-env NODE_ENV=development electron .",
+    "build:renderer": "webpack --mode production",
+    "build:main": "tsc src/main/main.ts --outDir dist/main --target es2020 --module commonjs",
+    "build": "npm run build:renderer && npm run build:main",
+    "electron": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "concurrently": "^9.2.0",
+    "cross-env": "^10.0.0",
+    "electron": "^37.3.0",
+    "typescript": "^5.9.2",
+    "wait-on": "^8.0.4"
+  },
+  "dependencies": {
+    "@types/react": "^19.1.10",
+    "@types/react-dom": "^19.1.7",
+    "@types/styled-components": "^5.1.34",
+    "css-loader": "^7.1.2",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.6.4",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "style-loader": "^4.0.0",
+    "styled-components": "^6.1.19",
+    "ts-loader": "^9.5.2",
+    "webpack": "^5.101.2",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.2"
+  }
+}
